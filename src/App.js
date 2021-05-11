@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import NavBar from './component/NavBar'
 // 封装好的路由
 import ViewRouter from './router/index'
 import './App.css';
@@ -15,6 +16,8 @@ function App() {
       </div> */}
 
       <ViewRouter />
+
+      <NavBar />
     </div>
   );
 }

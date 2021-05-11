@@ -1,0 +1,94 @@
+.container {
+    width: 100%;
+    max-width: 750px;
+    position: relative;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    overflow-x: hidden;
+    padding-top: 40px;
+
+    .cloes {
+        position: relative;
+        width: 100%;
+        float: left;
+        height: 40px;
+
+        :global {
+            .anticon-close {
+                position: absolute;
+                left: 18px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 12px;
+                height: 12px;
+                color: #2E2E2E;
+            }
+        }
+
+
+    }
+
+    .title {
+        position: relative;
+        width: 100%;
+        float: left;
+        height: 40px;
+
+        p {
+            padding-left: 23px;
+            text-align: left;
+            position: relative;
+            width: 100%;
+            float: left;
+            line-height: 40px;
+            font-size: 23px;
+            font-family: FZLanTingHeiS-R-GB;
+            font-weight: bold;
+            color: #1E252F;
+        }
+    }
+
+
+    .content {
+        position: relative;
+        width: 100%;
+        float: left;
+        margin-top: 12px;
+
+        .swiper {
+            height: 156px;
+            width: 100%;
+            position: relative;
+
+            :global {
+                .swiper-slide {
+                    height: 156px;
+                    padding: 0 20px;
+                    // width: 80% !important;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 15px;
+                        object-fit: cover;
+                    }
+                }
+
+                // .swiper-slide-active {
+                //     width: 90% !important;
+                //     margin: 0 !important;
+                // }
+                // .swiper-slide-prev{
+                //     margin-right: 0;
+                // }
+
+                // .swiper-slide-prev,
+                // .swiper-slide-next {
+                //     margin-top: 5px;
+                //     height: 146px;
+                // }
+            }
+        }
+    }
+}

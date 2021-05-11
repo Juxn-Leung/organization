@@ -1,0 +1,33 @@
+.container{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-top: 1px solid #EBEBEB;
+    height: 60px;
+    display: flex;
+
+    .nav{
+        position: relative;
+        height: 59px;
+        flex: 1;
+
+        .img{
+            width: 18px;
+            height: 18px;
+            position: relative;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            margin-top: 8px;
+            object-fit: contain;
+        }
+
+        p{
+            line-height: 24px;
+            position: relative;
+            color: #BCBDC1;
+        }
+    }
+}

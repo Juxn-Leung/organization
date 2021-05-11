@@ -1,16 +1,18 @@
 import React, { Component } from 'react'
 import { Form, Input, Button } from 'antd';
 import { CloseOutlined } from '@ant-design/icons';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { getLogin } from '../../request/ApiServ'
 
-const layout = {
-    labelCol: { span: 8 },
-    wrapperCol: { span: 16 },
-};
-const tailLayout = {
-    wrapperCol: { offset: 8, span: 16 },
-};
+import 'swiper/swiper.scss';
+import style from './index.module.scss';
 
+import wbb from '../../assest/index/wbb.png';
+import w from '../../assest/index/w.jpg';
+import ten from '../../assest/index/10.png';
+import bb from '../../assest/index/bb.jpg';
+const bannerList = [wbb, w, bb, ten];
+console.log(bannerList)
 export default class index extends Component {
 
     constructor(props) {
@@ -20,14 +22,6 @@ export default class index extends Component {
             passWord: null
         };
     }
-
-    onFinish = (values) => {
-        console.log('Success:', values);
-    };
-
-    onFinishFailed = (errorInfo) => {
-        console.log('Failed:', errorInfo);
-    };
 
     getLogin = async () => {
         let params = { //请求参数
@@ -55,45 +49,33 @@ export default class index extends Component {
 
     render() {
         return (
-            <div className="container">
-                <div className="cloes">
-                    <CloseOutlined />
-                </div>
-                <div className="title">
-                    <p>验证码登录</p>
+            <div className={style.container}>
+                {/* <div className={style.cloes}></div> */}
+                <div className={style.title}>
+                    <p>微教培少儿培训中心</p>
                 </div>
 
-                <div className="content">
-                    <Form
-                        {...layout}
-                        name="basic"
-                        initialValues={{ remember: true }}
-                        onFinish={this.onFinish}
-                        onFinishFailed={this.onFinishFailed}
-                    >
-                        <Form.Item
-                            name="username"
-                            rules={[{ required: true, message: '请输入手机号' }]}
+                <div className={style.content}>
+                    <div className={style.swiper}>
+                        <Swiper
+                            spaceBetween={50}
+                            slidesPerView={1}
+                            loop={true}
+                            onSlideChange={() => console.log('slide change')}
+                            onSwiper={(swiper) => console.log(swiper)}
                         >
-                            <Input />
-                        </Form.Item>
-
-                        <Form.Item
-                            name="password"
-                            rules={[{ required: true, message: '请输入验证码' }]}
-                        >
-                            <Input.Password />
-                        </Form.Item>
-
-                        <Form.Item {...tailLayout}>
-                            <Button type="primary" htmlType="submit">
-                                登录
-                            </Button>
-                        </Form.Item>
-                    </Form>
+                            {
+                                bannerList.map((item, index) => {
+                                    return (
+                                        <SwiperSlide>
+                                            <img key={index} src={item} />
+                                        </SwiperSlide>
+                                    )
+                                })
+                            }
+                        </Swiper>
+                    </div>
                 </div>
-
-                <div onClick={this.goRouter('/login')}>Go Login</div>
             </div>
         )
     }

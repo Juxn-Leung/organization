@@ -43,6 +43,20 @@ const routes = [
         }
     },
     {
+        path: '/curriculum',
+        component: lazy(() => import('../pages/Curriculum')),
+        meta: {
+            title: '选课'
+        }
+    },
+    {
+        path: '/mine',
+        component: lazy(() => import('../pages/Mine')),
+        meta: {
+            title: '我的'
+        }
+    },
+    {
         path: '/',
         component: lazy(() => import('../pages/Index')),
         meta: {
