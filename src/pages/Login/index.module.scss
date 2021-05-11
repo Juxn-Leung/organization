@@ -1,0 +1,163 @@
+.container {
+    width: 100%;
+    max-width: 750px;
+    position: relative;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    overflow-x: hidden;
+    padding-top: 40px;
+
+    .cloes {
+        position: relative;
+        width: 100%;
+        float: left;
+        height: 40px;
+
+        :global {
+            .anticon-close {
+                position: absolute;
+                left: 18px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 12px;
+                height: 12px;
+                color: #2E2E2E;
+            }
+        }
+
+
+    }
+
+    .title {
+        position: relative;
+        width: 100%;
+        float: left;
+        height: 40px;
+
+        p {
+            padding-left: 23px;
+            text-align: left;
+            position: relative;
+            width: 100%;
+            float: left;
+            line-height: 40px;
+            font-size: 23px;
+            font-family: FZLanTingHeiS-R-GB;
+            font-weight: bold;
+            color: #1E252F;
+        }
+    }
+
+
+    .content {
+        position: relative;
+        width: 100%;
+        float: left;
+        margin-top: 62px;
+
+        :global {
+            .ant-form {
+                position: relative;
+                width: 100%;
+                float: left;
+                margin: 0;
+                padding: 0 24px;
+
+                .ant-form-item {
+
+                    input {
+                        width: 100%;
+                        height: 36px;
+                        border: none;
+                        background: #F5F5F6;
+                        border-radius: 30px;
+                    }
+
+                    .ant-input-affix-wrapper{
+                        border: none;
+                        background: #F5F5F6;
+                        border-radius: 30px;
+                        height: 36px;
+                        padding: 0px 11px;
+                    }
+
+                    button{
+                        margin-top: 40px;
+                        width: 100%;
+                        border-radius: 30px;
+                        background: #437BFF;
+                        line-height: 36px;
+                        height: 36px;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .foot{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+
+        .title{
+            width: 100%;
+            position: relative;
+            height: 30px;
+
+            p{
+                width: 120px;
+                height: 30px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                line-height: 30px;
+                font-size: 14px;
+                color: #2E2E2E;
+                background: #fff;
+                z-index: 7;
+            }
+        }
+
+        .title::after{
+            width: 86%;
+            left: 7%;
+            top: 15px;
+            height: 1px;
+            position: absolute;
+            background: rgb(151, 151, 151);
+            content: '';
+        }
+
+        .button{
+            width: 100%;
+            position: relative;
+
+            p{
+                margin-top: 4px;
+                color: rgb(161, 161, 161);
+            }
+
+            :global{
+                .anticon-wechat{
+                    width: 30px;
+                    height: 30px;
+                    background: #07c160;
+                    color: #ffffff;
+                    border-radius: 50%;
+                    padding-top: 4px;
+                    padding-left: 0px;
+
+                    svg{
+                        width: 19px;
+                        height: 21px;
+                        top: 4px;
+                    }
+                }
+            }
+        }
+    }
+}
